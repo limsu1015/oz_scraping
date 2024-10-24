@@ -22,9 +22,9 @@ def get_chart_data():
 
     for i in lst:
         rank = i.select_one(".rank").text
-        song = i.select_one(".ellipsis.rank01").text
-        singer = i.select_one(".ellipsis.rank02").text
-        album = i.select_one(".ellipsis.rank03").text
+        song = i.select_one(".ellipsis.rank01 a").text
+        singer = i.select_one(".ellipsis.rank02 a").text
+        album = i.select_one(".ellipsis.rank03 a").text
 
         chart_data.append({
             "rank": rank,
